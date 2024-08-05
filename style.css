@@ -1,0 +1,75 @@
+body{
+    background-image: url(/images/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#brand{
+    text-align: center;
+    text-shadow: 1px 1px 1px;
+    color: chocolate;
+    font-family: cursive;
+    font-size: 50px;
+    border: 2px solid black;
+    background-color: darkseagreen;
+    border-radius: 10px;
+    margin:auto; /* Centres the element */
+    width:50%;
+    position:relative;
+    margin-top:50px;
+}
+
+#findHeader{
+    color: chocolate;
+}
+
+#main{
+    text-align: center;
+    background-color: darkseagreen;
+    margin: auto;
+    width: 50%;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+#productLabel{
+    font-size: 2em;
+    font-family: cursive;
+    margin-right: 10px;
+}
+
+#productDropdown{
+    border: 2px solid;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#quantityLabel{
+    font-size: 2em;
+    font-family: cursive;
+    margin-right: 10px;
+}
+
+#quantityDropdown{
+    border: 2px solid;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#addBtn{
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 2em;
+    border-radius: 5px;
+    background-color:crimson;
+}
+
+#add:hover{
+    background-color: red;
+}
+

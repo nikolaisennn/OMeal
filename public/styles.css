@@ -1,9 +1,11 @@
 body{
-    background-image: url(images/background.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
+    /* Override style from bootstrap */
+    background-color: darksalmon !important;
+}
+
+#header{
+    background-color: wheat;
+    height: 100px;
 }
 
 #brand{
@@ -12,13 +14,18 @@ body{
     color: chocolate;
     font-family: cursive;
     font-size: 50px;
-    border: 2px solid black;
-    background-color: darkseagreen;
-    border-radius: 10px;
-    margin:auto; /* Centres the element */
-    width:50%;
+    margin:0; /* Centres the element */
     position:relative;
-    margin-top:50px;
+    margin-top:20px;
+}
+
+#chefimg{
+    height: 100px;
+    object-fit: contain;
+    border-radius: 50%;
+    /* Center the image within the col */
+    display: block;
+    margin: auto;
 }
 
 #findHeader{
@@ -29,12 +36,13 @@ body{
     text-align: center;
     background-color: darkseagreen;
     margin: auto;
-    width: 50%;
+    width: 80%;
     position: relative;
     padding-top: 20px;
     padding-bottom: 20px;
     border-radius: 10px;
     border: 2px solid black;
+    margin-top: 50px;
 }
 
 #productLabel{
@@ -59,6 +67,16 @@ body{
     border: 2px solid;
     border-radius: 5px;
     padding: 5px;
+}
+
+#loginBtn{
+    font-family: cursive;
+    font-size: 2em;
+    border-radius: 5px;
+    background-color: darkseagreen;
+    display: block;
+    margin: auto;
+    margin-top: 22.8px;
 }
 
 #addBtn{

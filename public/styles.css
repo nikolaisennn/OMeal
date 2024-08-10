@@ -1,11 +1,18 @@
+#addBtn{
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 2em;
+    border-radius: 5px;
+    background-color:crimson;
+}
+
+#add:hover{
+    background-color: red;
+}
+
 body{
     /* Override style from bootstrap */
     background-color: darksalmon !important;
-}
-
-#header{
-    background-color: wheat;
-    height: 100px;
 }
 
 #brand{
@@ -32,6 +39,27 @@ body{
     color: chocolate;
 }
 
+#header{
+    background-color: wheat;
+    height: 100px;
+}
+
+#loginBtn{
+    font-family: cursive;
+    font-size: 2em;
+    border-radius: 5px;
+    background-color: darkseagreen;
+    display: block;
+    margin: auto;
+    margin-top: 22.8px;
+}
+
+#loginForm{
+    text-align: center;
+    margin-top: 20px;
+    font-family: cursive;
+}
+
 #main{
     text-align: center;
     background-color: darkseagreen;
@@ -45,19 +73,13 @@ body{
     margin-top: 50px;
 }
 
-#productLabel{
-    font-size: 2em;
-    font-family: cursive;
-    margin-right: 10px;
-}
-
 #productDropdown{
     border: 2px solid;
     border-radius: 5px;
     padding: 5px;
 }
 
-#quantityLabel{
+#productLabel{
     font-size: 2em;
     font-family: cursive;
     margin-right: 10px;
@@ -69,25 +91,15 @@ body{
     padding: 5px;
 }
 
-#loginBtn{
+#quantityLabel{
+    font-size: 2em;
     font-family: cursive;
-    font-size: 2em;
-    border-radius: 5px;
-    background-color: darkseagreen;
-    display: block;
-    margin: auto;
-    margin-top: 22.8px;
+    margin-right: 10px;
 }
 
-#addBtn{
-    margin-top: 10px;
-    padding: 10px;
-    font-size: 2em;
-    border-radius: 5px;
-    background-color:crimson;
-}
 
-#add:hover{
-    background-color: red;
-}
+
+
+
+
 

@@ -5,11 +5,11 @@ const app = express()
 /* Modules */
 const path = require('path')
 const morgan = require('morgan');
-const mongoose = require('mongoose');
+const mongoose = require('mongoose'); 
 const productsRouter = require('./routes/products')
 
 // static assets
-app.use(express.static(path.join(__dirname, 'views')))
+app.use(express.static(path.join(__dirname, 'public')))
 // bootstrap
 app.use(express.static(path.join(__dirname, "node_modules/bootstrap/dist/")));
 // parse form data
@@ -19,7 +19,9 @@ app.use(express.json())
 // Morgan middleware in 'dev' mode
 app.use(morgan('tiny'));
 // register view engine
+app.engine('.ejs', require('ejs').__express);
 app.set('view engine', 'ejs');
+app.set('views', 'public');
 // Routes 
 app.use('/api/products', productsRouter)
 

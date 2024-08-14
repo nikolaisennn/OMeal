@@ -7,9 +7,10 @@ const path = require('path')
 const morgan = require('morgan');
 const mongoose = require('mongoose'); 
 const productsRouter = require('./routes/products')
+const recipesRouter = require('./routes/recipes')
 
 // static assets
-app.use(express.static(path.join(__dirname, 'public')))
+// app.use(express.static(path.join(__dirname, 'public')))
 // bootstrap
 app.use(express.static(path.join(__dirname, "node_modules/bootstrap/dist/")));
 // parse form data
@@ -19,11 +20,11 @@ app.use(express.json())
 // Morgan middleware in 'dev' mode
 app.use(morgan('tiny'));
 // register view engine
-app.engine('.ejs', require('ejs').__express);
 app.set('view engine', 'ejs');
-app.set('views', 'public');
+// app.set('views', 'public');
 // Routes 
 app.use('/api/products', productsRouter)
+app.use('/api/recipes', recipesRouter)
 
 // Connect to database
 const dbURI = 'mongodb+srv://nikolaisen:Niksatacs11@omeal.zw1wn.mongodb.net/OMeal?retryWrites=true&w=majority&appName=OMeal';
@@ -36,3 +37,8 @@ mongoose.connect(dbURI)
   .catch((err)=>{
     console.log(err);
   })
+
+// Handle views
+app.get('/', (req,res)=>{
+    res.render('index.ejs');
+})

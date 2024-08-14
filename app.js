@@ -10,7 +10,7 @@ const productsRouter = require('./routes/products')
 const recipesRouter = require('./routes/recipes')
 
 // static assets
-// app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'public')))
 // bootstrap
 app.use(express.static(path.join(__dirname, "node_modules/bootstrap/dist/")));
 // parse form data
@@ -21,7 +21,6 @@ app.use(express.json())
 app.use(morgan('tiny'));
 // register view engine
 app.set('view engine', 'ejs');
-// app.set('views', 'public');
 // Routes 
 app.use('/api/products', productsRouter)
 app.use('/api/recipes', recipesRouter)
@@ -38,7 +37,14 @@ mongoose.connect(dbURI)
     console.log(err);
   })
 
-// Handle views
-app.get('/', (req,res)=>{
-    res.render('index.ejs');
-})
+app.get('/', (req, res) => {
+  res.render('index.ejs');
+});
+
+app.get('/login', (req, res) => {
+  res.render('login.ejs');
+});
+
+app.get('/register', (req, res) => {
+  res.render('register.ejs');
+});
